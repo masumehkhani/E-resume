@@ -21,7 +21,7 @@
      background-color: #fff;
      margin: 50px;
      display: grid;
-     grid-template-columns: 1fr 2fr;
+     grid-template-columns: 1.1fr 2fr;
      box-shadow: 0cqh 10px 15px rgba(0, 0, 0, 0.1);
  }
 
@@ -72,10 +72,12 @@
 
  .profileText h2 span {
      font-size: 0.8rem;
+     display: block;
+     margin-top: 0.5rem;
  }
 
  .contactInfo {
-     padding-top: 40px;
+     padding-top: 60px;
  }
 
  .title {
@@ -196,12 +198,39 @@
      color: #848c99;
      font-weight: 500;
  }
+ .skills .box li {
+     list-style: none;
+ }
 
+ .projects .box {
+     position: relative;
+     display: grid;
+     width: 100%;
+     grid-template-columns: 150px 1fr;
+     justify-content: center;
+     align-items: center;
+ }
  .project_title a {
      text-decoration: none;
-     color: #848c90;
+    color: #848c99;
  }
 
  .projects .text p {
      color: #003147;
  }
+@media screen and (max-width:600px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about .box {
+        flex-direction: column;
+
+    }
+    .projects .box {
+        grid-template-columns: repeat(1, 1fr);
+
+    }
+    .project_title{
+        margin-bottom: 0.5rem;
+    }
+}
